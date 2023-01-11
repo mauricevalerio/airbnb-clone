@@ -1,4 +1,4 @@
-import star from '../imgs/star.png'
+import star from '../assets/star.png'
 
 export default function Card(props) {
     let badgeText
@@ -10,7 +10,7 @@ export default function Card(props) {
     return (
         <section className='card'>
             {badgeText && <div className='card-badge'>{badgeText}</div>}
-            <img src={`src/imgs/${props.card.coverImg}`} alt="Katie Zaferes Smiling" className='card-image' />
+            <img src={`./${props.card.coverImg}`} className='card-image' />
             <div className='card-details-container'>
                 <img src={star} alt="Red Star Icon" className='card-star-image' />
                 <span>{props.card.stats.rating} ({props.card.stats.reviewCount}) &#x2022; {props.card.location}</span>
