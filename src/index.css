@@ -12,16 +12,16 @@ body {
 
 /* NAV */
 
-nav>img {
-  max-width: 100px;
-}
-
 nav {
   width: 100%;
-  height: 70px;
+  min-height: 70px;
   display: flex;
-  padding: 20px 36px;
+  padding: 1.5em;
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.airbnb-logo {
+  max-width: 100px;
 }
 
 /* HERO */
@@ -32,27 +32,26 @@ nav {
 .hero-photo-grid {
   max-width: 325px;
   display: block;
-  margin: 0 auto;
 }
 
-.hero>p {
-  max-width: 320px;
+.hero {
   color: #222222;
+  text-align: center;
 }
 
-
-/* MAIN */
+/* CARDS */
 .cards-list {
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  padding: 1em;
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 7.5px;
+  gap: 5px;
   font-size: 0.75rem;
   padding: 1em;
 }
@@ -65,27 +64,26 @@ nav {
   padding: 0.25em;
   border-radius: 2px;
   font-weight: 700;
+
 }
 
 .card-image {
   border-radius: 9px;
-  max-width: 175px;
+  max-width: 180px;
 }
 
 .card-details-container {
   display: flex;
-  gap: 2px;
+  gap: 5px;
 }
 
 .card-star-image {
   max-width: 15px;
+  max-height: 15px;
 }
 
-.card-star-image+span,
-.card-description,
-.card-price {
-  font-size: 0.75rem;
-  line-height: 1.1;
+.card-text-style {
+  line-height: 1.5;
   color: #222222;
 }
 
@@ -95,9 +93,20 @@ nav {
 }
 
 @media (min-width: 480px) {
+  .hero-photo-grid {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 576px) {
 
   .hero-photo-grid {
-    max-width: 80%;
+    max-width: 75%;
+  }
+
+  .hero {
+    text-align: left;
+    padding: 2em;
   }
 
   h1 {
@@ -111,10 +120,11 @@ nav {
   }
 
   .cards-list {
-    width: 100%;
     justify-content: center;
   }
+}
 
+@media (min-width: 768px) {
   .card-image {
     max-width: 250px;
   }
